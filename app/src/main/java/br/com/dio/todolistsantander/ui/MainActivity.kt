@@ -5,6 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.View
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import br.com.dio.todolistsantander.databinding.ActivityMainBinding
 import br.com.dio.todolistsantander.datasource.TaskDataSource
@@ -22,6 +23,8 @@ class MainActivity : AppCompatActivity() {
         binding.rvTarefa.adapter = adapter
         updateList()
 
+        Toast.makeText(this,"Criado por Alex",Toast.LENGTH_SHORT ).show()
+
         insertListeners()
         //DATA STORE
         //ROOM
@@ -35,8 +38,8 @@ class MainActivity : AppCompatActivity() {
         adapter.listenerEdit = {
             val intent = Intent(this, AddTaskActivity::class.java)
             intent.putExtra(AddTaskActivity.TASK_ID, it.id)
-//            startActivityForResult(intent, CREATE_NEW_TASK)
-            startActivityForResult(Intent(CREATE_NEW_TASK))
+            startActivityForResult(intent, CREATE_NEW_TASK)
+        }
 
         adapter.listenerDelete = {
             TaskDataSource.deleteTask(it)
@@ -47,8 +50,8 @@ class MainActivity : AppCompatActivity() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
         if (requestCode == CREATE_NEW_TASK && resultCode == Activity.RESULT_OK) updateList()
-//            binding.rvTarefa.adapter = adapter
-//            adapter.submitList(TaskDataSource.getList())
+        //binding.rvTarefa.adapter = adapter
+        //adapter.submitList(TaskDataSource.getList())
     }
 
     private fun updateList() {

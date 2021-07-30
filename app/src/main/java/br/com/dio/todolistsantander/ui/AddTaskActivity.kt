@@ -35,15 +35,14 @@ class AddTaskActivity : AppCompatActivity() {
                 binding.tilHora.text = it.hour
             }
         }
-
         insertListeners()
-
     }
 
     private fun insertListeners() {
         binding.tilData.editText?.setOnClickListener {
 //            Log.e("TAG", "insertListeners: ")
             val datePicker = MaterialDatePicker.Builder.datePicker().build()
+
             datePicker.addOnPositiveButtonClickListener {
                 val timeZone = TimeZone.getDefault()
                 val offset = timeZone.getOffset(Date().time) * -1

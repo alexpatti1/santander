@@ -1,5 +1,6 @@
 <resources>
-    <string name="app_name">ToDoListSantander</string>
+<!--    <string name="app_name">ToDoListSantander</string>-->
+    <string name="app_name">Banco Santander</string>
     <string name="label_tarefa">Criar tarefa</string>
     <string name="label_titulo">Título</string>
     <string name="label_data">Data</string>
