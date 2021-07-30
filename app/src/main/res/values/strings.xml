@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">ToDoListSantander</string>
+    <string name="label_tarefa">Criar tarefa</string>
+    <string name="label_titulo">Título</string>
+    <string name="label_data">Data</string>
+    <string name="label_hora">Hora</string>
+<!--    <string name="label_new_tarefa">Criar tarefa</string>-->
+    <string name="label_cancelar">Cancelar</string>
+    <string name="label_tarefas">Tarefas</string>
+    <string name="label_nova_tarefa">Nova tarefa</string>
+    <string name="label_editar">Editar</string>
+    <string name="label_deletar">Deletar</string>
+    <string name="label_dont_have_task">Você ainda não possui nenhuma tarefa para hoje</string>
+</resources>
